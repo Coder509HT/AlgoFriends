@@ -1,0 +1,25 @@
+{
+  "name": "AlgoFriends",
+  "description": "Une simple application pour pouvoir échanger des algorithmes avec des amis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/index.js",
+    "start": "node server/index.js"
+  },
+  "repository": "https://github.com/Coder509HT/AlgoFriends.git",
+  "author": "Coder509HT <Coder509HT@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.18"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.0"
+  }
+}
