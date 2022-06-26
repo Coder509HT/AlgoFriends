@@ -4,17 +4,15 @@ const {
   getUsers,
   getUser,
   updateUser,
-  deleteUser
+  deleteUser,
+  authUser
 } = require("../controllers/user");
-
-const validateUser = require("../validations/user");
+const { createUserValidation } = require("../validations/user");
 
 const router = express.Router();
 
-router.post("/", validateUser, addUser);
-router.get("/", getUsers);
-router.get("/:id", getUser);
-router.put("/:id", validateUser, updateUser);
-router.delete("/:id", deleteUser);
+router.route("/").post(createUserValidation, addUser).get(getUsers);
+router.route("/:id").get(getUser).put(updateUser).delete(deleteUser);
+router.route("/login").post(authUser);
 
 module.exports = router;
